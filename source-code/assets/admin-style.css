@@ -1,0 +1,2175 @@
+/* Enhanced Message Admin - Responsive Admin Styles */
+
+/* ==========================================================================
+   MAIN LAYOUT
+   ========================================================================== */
+
+.message-admin-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Layout */
+.message-admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.message-admin-header .page-title-action,
+.message-admin-header .button,
+.clear-cache-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.message-admin-header .button-text {
+  display: inline;
+}
+
+/* ==========================================================================
+     DASHBOARD STATISTICS
+     ========================================================================== */
+
+.message-admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.message-admin-stat-box,
+.stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.message-admin-stat-box:hover,
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Stat Card Variants */
+.stat-card.stat-total {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stat-card.stat-active {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.stat-card.stat-inactive {
+  background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+}
+
+.stat-card.stat-dismissible {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+}
+
+.stat-icon {
+  font-size: 2.5em;
+  opacity: 0.9;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.message-admin-stat-number,
+.stat-number {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.message-admin-stat-label,
+.stat-label {
+  font-size: 0.9em;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+     CONTROLS AND BULK ACTIONS
+     ========================================================================== */
+
+.message-admin-bulk-actions,
+.message-admin-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.bulk-actions-left,
+.bulk-actions-right,
+.controls-left,
+.controls-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bulk-action-select,
+.filter-select {
+  min-width: 140px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-input {
+  min-width: 200px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.apply-bulk-btn {
+  background-color: #0073aa;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+     RESPONSIVE TABLES
+     ========================================================================== */
+
+.table-responsive {
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: white;
+}
+
+.wp-list-table,
+.messages-table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.wp-list-table thead th,
+.messages-table thead th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 15px 12px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.wp-list-table tbody td,
+.messages-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #f1f1f1;
+  vertical-align: middle;
+}
+
+.wp-list-table tbody tr:hover,
+.messages-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.wp-list-table tbody tr:last-child td,
+.messages-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Column Specific Styles */
+.column-id {
+  width: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.column-title {
+  min-width: 200px;
+}
+
+.message-title {
+  color: #0073aa;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+     BADGES AND STATUS INDICATORS
+     ========================================================================== */
+
+/* Position Badge */
+.position-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.position-badge.position-manual,
+.position-manual {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.position-badge.position-before_content,
+.position-before_content {
+  background: #d4edda;
+  color: #155724;
+}
+
+.position-badge.position-after_content,
+.position-after_content {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.position-badge.position-header,
+.position-header {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.position-badge.position-footer,
+.position-footer {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Status Badges */
+.status-toggle,
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+  justify-content: center;
+}
+
+.status-toggle.status-active,
+.status-badge.status-active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-toggle.status-inactive,
+.status-badge.status-inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.status-toggle.loading {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status-toggle.loading::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 6px;
+}
+
+/* Dismissible Status */
+.dismissible-yes {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.dismissible-no {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+     ACTION BUTTONS
+     ========================================================================== */
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.button-small {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  font-size: 11px;
+  border-radius: 4px;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #0073aa;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button-small:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.button-small.loading {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+     SHORTCODE COPY
+     ========================================================================== */
+
+.shortcode-copy {
+  background: #f1f1f1;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: all;
+  display: inline-block;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Courier New", monospace;
+}
+
+.shortcode-copy:hover {
+  background: #e1e1e1;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+     EMPTY STATE
+     ========================================================================== */
+
+.no-messages-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.empty-icon {
+  font-size: 4em;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  margin: 0;
+  color: #666;
+  font-size: 1.5em;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #999;
+  font-size: 1.1em;
+}
+
+/* ==========================================================================
+     ANALYTICS
+     ========================================================================== */
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.analytics-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cache-info {
+  color: #666;
+  font-style: italic;
+}
+
+.analytics-overview {
+  margin-bottom: 30px;
+}
+
+.overview-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-icon {
+  font-size: 3em;
+  opacity: 0.9;
+}
+
+.card-content h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.5em;
+}
+
+.metrics {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric-value {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 0.9em;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+.analytics-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.chart-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.chart-download {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 300px;
+}
+
+.analytics-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.details-section,
+.insights-section {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.details-section h3,
+.insights-section h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #0073aa;
+}
+
+/* Insights */
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.insight {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.insight.warning {
+  background: #fff3cd;
+  border-color: #ffc107;
+}
+
+.insight.info {
+  background: #d1ecf1;
+  border-color: #17a2b8;
+}
+
+.insight.success {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+.insight-icon {
+  font-size: 1.2em;
+  flex-shrink: 0;
+}
+
+.insight-content h4 {
+  margin: 0 0 5px 0;
+  font-size: 1em;
+}
+
+.insight-content p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+     SETTINGS AND FORMS
+     ========================================================================== */
+
+.settings-form {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.settings-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.settings-section {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.settings-section h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.3em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Form Container */
+.message-form .form-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.message-form .form-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.message-form .form-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.message-form .form-field {
+  margin-bottom: 20px;
+}
+
+.message-form .form-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Cache Status */
+.cache-status {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cache-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.cache-label {
+  font-weight: 500;
+}
+
+.cache-value {
+  color: #0073aa;
+  font-weight: 500;
+}
+
+.cache-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.optimization-info {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Widget Areas */
+.widget-area .message-admin-widget {
+  margin: 10px 0;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Import/Export */
+.import-export-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.export-section,
+.import-section {
+  background: #fff;
+}
+
+.export-section .postbox,
+.import-section .postbox {
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.export-stats {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+  border: 1px solid #e9ecef;
+}
+
+.import-warning {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.import-warning ul {
+  margin: 10px 0 0 20px;
+}
+
+.export-format-info {
+  margin: 30px 0;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccd0d4;
+}
+
+/* Pages Checklist */
+.pages-checklist {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fafafa;
+  border-radius: 4px;
+}
+
+.pages-checklist label {
+  display: block;
+  padding: 4px 0;
+  font-weight: normal;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pages-checklist label:hover {
+  background-color: #f0f0f0;
+  padding-left: 5px;
+}
+
+.pages-checklist input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* WordPress Specific */
+.postbox h3 {
+  font-size: 14px;
+  padding: 12px;
+  margin: 0;
+  line-height: 1.4;
+  background: #f1f1f1;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.postbox .inside {
+  padding: 12px;
+}
+
+.submitbox .misc-pub-section {
+  border-bottom: 1px solid #eee;
+  padding: 11px 0;
+}
+
+.submitbox .misc-pub-section:last-child {
+  border-bottom: none;
+}
+
+.major-publishing-actions {
+  padding: 10px 0;
+  clear: both;
+  border-top: 1px solid #ddd;
+  background: #f5f5f5;
+  margin: 0 -12px -12px;
+}
+
+.publishing-action {
+  text-align: right;
+  float: right;
+  padding: 12px;
+}
+
+/* WordPress Editor */
+.wp-editor-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.wp-editor-wrap .wp-editor-tools {
+  background: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ==========================================================================
+     HELP SECTION
+     ========================================================================== */
+
+.message-admin-help {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.message-admin-help h3 {
+  margin: 0 0 25px 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.tips-grid,
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.tip-item,
+.help-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.tip-item h4 {
+  margin: 0 0 10px 0;
+  color: #0073aa;
+}
+
+.tip-item p {
+  margin: 0;
+  color: #555;
+}
+
+.tip-icon,
+.help-icon {
+  font-size: 1.5em;
+  flex-shrink: 0;
+}
+
+.tip-content,
+.help-content {
+  flex: 1;
+  color: #000;
+}
+
+.tip-content strong,
+.help-content strong {
+  color: #ffd700;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Reset IDs Section */
+.reset-ids-section {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ==========================================================================
+     NOTIFICATIONS
+     ========================================================================== */
+
+.admin-toast,
+.admin-notification {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  z-index: 10000;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+
+.admin-toast.show,
+.admin-notification.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toast-success,
+.notification-success {
+  background: #28a745;
+}
+
+.toast-error,
+.notification-error {
+  background: #dc3545;
+}
+
+.toast-info,
+.notification-info {
+  background: #17a2b8;
+}
+
+/* WordPress Notices */
+.notice-success {
+  border-left-color: #46b450;
+}
+
+.notice-error {
+  border-left-color: #dc3232;
+}
+
+.notice-warning {
+  border-left-color: #ffb900;
+}
+
+.notice-info {
+  border-left-color: #00a0d2;
+}
+
+/* ==========================================================================
+     ANIMATIONS
+     ========================================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================================
+     ACCESSIBILITY AND INTERACTIONS
+     ========================================================================== */
+
+/* Screen Reader Text */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* Focus States */
+.postbox:focus-within {
+  border-color: #0073aa;
+  box-shadow: 0 0 0 1px #0073aa;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #0073aa;
+  box-shadow: 0 0 0 1px #0073aa;
+  outline: none;
+}
+
+/* Loading States */
+.button.loading::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: button-spin 1s linear infinite;
+}
+
+/* Form Validation */
+.form-field.error input,
+.form-field.error textarea,
+.form-field.error select {
+  border-color: #dc3232;
+  box-shadow: 0 0 0 1px #dc3232;
+}
+
+.form-field .error-message {
+  color: #dc3232;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* ==========================================================================
+     RESPONSIVE DESIGN
+     ========================================================================== */
+
+@media screen and (max-width: 1200px) {
+  .analytics-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-details {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid,
+  .help-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .message-admin-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .message-admin-header .button-text {
+    display: none;
+  }
+
+  .message-admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .stat-icon {
+    font-size: 2em;
+  }
+
+  .message-admin-stat-number,
+  .stat-number {
+    font-size: 1.8em;
+  }
+
+  .message-admin-bulk-actions,
+  .message-admin-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bulk-actions-left,
+  .bulk-actions-right,
+  .controls-left,
+  .controls-right {
+    justify-content: center;
+  }
+
+  .search-input,
+  .filter-select {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .message-form .form-container {
+    flex-direction: column;
+  }
+
+  .message-form .form-sidebar {
+    width: 100%;
+    order: -1;
+  }
+
+  .import-export-container {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid,
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  /* Hide mobile columns */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+
+  .button-small .button-text {
+    display: none;
+  }
+
+  .button-small {
+    min-width: 35px;
+    justify-content: center;
+  }
+
+  /* Mobile table layout */
+  .wp-list-table,
+  .messages-table {
+    font-size: 12px;
+  }
+
+  .wp-list-table,
+  .wp-list-table thead,
+  .wp-list-table tbody,
+  .wp-list-table th,
+  .wp-list-table td,
+  .wp-list-table tr,
+  .messages-table,
+  .messages-table thead,
+  .messages-table tbody,
+  .messages-table th,
+  .messages-table td,
+  .messages-table tr {
+    display: block;
+  }
+
+  .wp-list-table thead,
+  .messages-table thead {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .wp-list-table tbody tr,
+  .messages-table tbody tr {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #fff;
+  }
+
+  .wp-list-table tbody td,
+  .messages-table tbody td {
+    border: none;
+    padding: 5px 0;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .wp-list-table tbody td:before,
+  .messages-table tbody td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .postbox h3 {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .postbox .inside {
+    padding: 10px;
+  }
+
+  .major-publishing-actions {
+    text-align: center;
+  }
+
+  .publishing-action {
+    float: none;
+    text-align: center;
+  }
+
+  .button-large {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hide-tablet {
+    display: none !important;
+  }
+
+  .message-admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .message-admin-stat-box,
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .metrics {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cache-actions {
+    flex-direction: column;
+  }
+}
+
+/* ==========================================================================
+     PRINT STYLES
+     ========================================================================== */
+
+@media print {
+  .message-admin-bulk-actions,
+  .message-admin-controls,
+  .action-buttons,
+  .form-sidebar,
+  .button,
+  .notice {
+    display: none !important;
+  }
+
+  .wp-list-table,
+  .messages-table {
+    font-size: 12px;
+  }
+
+  .message-admin-help {
+    background: #f8f9fa !important;
+    color: #333 !important;
+  }
+
+  .form-main {
+    width: 100% !important;
+  }
+
+  .postbox {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+}
+/* ==========================================================================
+   FIXED TABLE ALIGNMENT AND MOBILE CENTERING
+   ========================================================================== */
+
+/* Fix table layout and prevent overflow */
+.table-responsive {
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: white;
+}
+
+.wp-list-table,
+.messages-table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0;
+  table-layout: fixed; /* Ensures consistent column widths */
+  min-width: 1200px; /* Prevents table from being too compressed */
+}
+
+/* Fix column widths to prevent content overflow */
+.column-id {
+  width: 50px;
+  text-align: center;
+}
+
+.column-title {
+  width: 180px;
+}
+
+.column-content {
+  width: 120px;
+}
+
+.column-position {
+  width: 130px;
+}
+
+.column-pages {
+  width: 120px;
+}
+
+.column-roles {
+  width: 100px;
+}
+
+.column-status {
+  width: 90px;
+}
+
+.column-dismissible {
+  width: 80px;
+}
+
+.column-schedule {
+  width: 140px;
+}
+
+.column-shortcode {
+  width: 160px;
+}
+
+.column-actions {
+  width: 140px; /* Increased width to accommodate buttons */
+  min-width: 140px;
+}
+
+/* Fix header alignment */
+.wp-list-table thead th,
+.wp-list-table thead td {
+  text-align: left;
+  padding: 12px 8px;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Center ID column header and content */
+.wp-list-table .column-id,
+.messages-table .column-id {
+  text-align: center;
+}
+
+.wp-list-table thead .column-id,
+.messages-table thead .column-id {
+  text-align: center;
+}
+
+/* Fix table cell padding and alignment */
+.wp-list-table tbody td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #f1f1f1;
+  vertical-align: middle;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+/* Ensure action buttons container doesn't overflow */
+.action-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 130px; /* Prevent overflow */
+}
+
+.button-small {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  white-space: nowrap;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.edit-btn {
+  background-color: #0073aa;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Fix shortcode display */
+.shortcode-copy {
+  display: block;
+  width: 100%;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: #f1f1f1;
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+  border: 1px solid #ddd;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE DESIGN WITH CENTERED CONTENT
+   ========================================================================== */
+
+@media screen and (max-width: 782px) {
+  /* Ensure table and its elements are visible on mobile */
+  .table-responsive {
+    display: block !important;
+    visibility: visible !important;
+    overflow: visible;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .wp-list-table,
+  .messages-table {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    background: transparent;
+    border-radius: 0;
+    min-width: auto;
+    table-layout: auto;
+  }
+
+  .wp-list-table thead,
+  .messages-table thead {
+    display: none !important; /* Hide header on mobile */
+  }
+
+  .wp-list-table tbody,
+  .messages-table tbody {
+    display: block !important;
+    visibility: visible !important;
+    width: 100%;
+  }
+
+  /* Mobile message cards */
+  .wp-list-table tbody tr,
+  .messages-table tbody tr {
+    display: block !important;
+    visibility: visible !important;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  /* Mobile table cells as flex containers */
+  .wp-list-table tbody td,
+  .messages-table tbody td {
+    display: flex !important;
+    visibility: visible !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    padding: 8px 0;
+    width: 100%;
+    position: relative;
+    min-height: auto;
+  }
+
+  /* Mobile labels */
+  .wp-list-table tbody td:before,
+  .messages-table tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #0073aa;
+    margin-bottom: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Hide labels for specific columns */
+  .wp-list-table tbody .check-column:before,
+  .wp-list-table tbody .column-actions:before,
+  .messages-table tbody .check-column:before,
+  .messages-table tbody .column-actions:before {
+    display: none;
+  }
+
+  /* Checkbox positioning */
+  .wp-list-table tbody .check-column,
+  .messages-table tbody .check-column {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0;
+    text-align: left;
+    width: auto;
+    height: auto;
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  /* ID styling */
+  .wp-list-table tbody .column-id,
+  .messages-table tbody .column-id {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0073aa;
+    margin-bottom: 10px;
+    padding-top: 0;
+  }
+
+  /* Title styling */
+  .wp-list-table tbody .column-title,
+  .messages-table tbody .column-title {
+    margin-bottom: 15px;
+  }
+
+  .message-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  /* Status styling */
+  .wp-list-table tbody .column-status,
+  .messages-table tbody .column-status {
+    margin-bottom: 15px;
+  }
+
+  .status-toggle {
+    margin: 0 auto;
+    display: inline-flex;
+  }
+
+  /* Content preview */
+  .wp-list-table tbody .column-content,
+  .messages-table tbody .column-content {
+    margin-bottom: 10px;
+  }
+
+  /* Position badge */
+  .wp-list-table tbody .column-position,
+  .messages-table tbody .column-position {
+    margin-bottom: 10px;
+  }
+
+  .position-badge {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  /* Pages and roles */
+  .wp-list-table tbody .column-pages,
+  .wp-list-table tbody .column-roles,
+  .messages-table tbody .column-pages,
+  .messages-table tbody .column-roles {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  /* Dismissible status */
+  .wp-list-table tbody .column-dismissible,
+  .messages-table tbody .column-dismissible {
+    margin-bottom: 10px;
+  }
+
+  .dismissible-yes,
+  .dismissible-no {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .dismissible-yes {
+    background: #d4edda;
+    color: #155724;
+  }
+
+  .dismissible-no {
+    background: #f8d7da;
+    color: #721c24;
+  }
+
+  /* Schedule */
+  .wp-list-table tbody .column-schedule,
+  .messages-table tbody .column-schedule {
+    margin-bottom: 10px;
+  }
+
+  .schedule-info {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .schedule-always,
+  .schedule-start,
+  .schedule-end {
+    display: block;
+    margin: 2px 0;
+  }
+
+  /* Shortcode */
+  .wp-list-table tbody .column-shortcode,
+  .messages-table tbody .column-shortcode {
+    margin-bottom: 15px;
+  }
+
+  .shortcode-copy {
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: 11px;
+    padding: 6px 10px;
+    display: block;
+    text-align: center;
+  }
+
+  /* Actions */
+  .wp-list-table tbody .column-actions,
+  .messages-table tbody .column-actions {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    width: 100%;
+  }
+
+  .action-buttons {
+    justify-content: center;
+    gap: 10px;
+    max-width: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .button-small {
+    min-width: 80px;
+    padding: 8px 12px;
+    justify-content: center;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .button-small .button-text {
+    display: inline;
+  }
+
+  /* Empty state */
+  .no-messages-found {
+    display: block !important;
+    visibility: visible !important;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .empty-state {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .empty-icon {
+    font-size: 3em;
+    opacity: 0.5;
+  }
+
+  .empty-state h3 {
+    margin: 0;
+    color: #666;
+    font-size: 1.3em;
+  }
+
+  .empty-state p {
+    margin: 0;
+    color: #999;
+    font-size: 1em;
+  }
+}
+
+/* ==========================================================================
+     FORCE VISIBILITY ON ALL MOBILE ELEMENTS
+     ========================================================================== */
+
+@media screen and (max-width: 782px) {
+  /* Force display for all message table elements */
+  .message-admin-wrap,
+  .message-admin-stats,
+  .message-admin-bulk-actions,
+  .table-responsive,
+  .wp-list-table,
+  .wp-list-table tbody,
+  .wp-list-table tbody tr,
+  .wp-list-table tbody td,
+  .message-row {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Ensure stats are visible */
+  .message-admin-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .message-admin-stat-box {
+    display: flex !important;
+    visibility: visible !important;
+  }
+
+  /* Ensure bulk actions are visible */
+  .message-admin-bulk-actions {
+    display: flex !important;
+    visibility: visible !important;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  .bulk-actions-left,
+  .bulk-actions-right {
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP SPECIFIC FIXES
+   ========================================================================== */
+
+@media screen and (min-width: 783px) {
+  /* Ensure proper desktop layout */
+  .hide-mobile,
+  .hide-tablet {
+    display: table-cell !important;
+  }
+
+  /* Show button text on desktop */
+  .button-small .button-text {
+    display: inline;
+  }
+
+  /* Ensure ID column is properly centered */
+  .wp-list-table .column-id {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* Fix action buttons alignment on desktop */
+  .action-buttons {
+    justify-content: flex-start;
+  }
+
+  /* Ensure table doesn't get too compressed */
+  .table-responsive {
+    min-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   ADDITIONAL MOBILE ENHANCEMENTS
+   ========================================================================== */
+
+@media screen and (max-width: 600px) {
+  /* Further mobile optimizations */
+  .wp-list-table tbody tr {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .message-title {
+    font-size: 15px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .button-small {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  /* Stack schedule dates vertically */
+  .schedule-info {
+    line-height: 1.4;
+  }
+
+  .schedule-start,
+  .schedule-end {
+    display: block;
+    margin: 4px 0;
+  }
+}
+/* ==========================================================================
+   MOBILE CENTERING FIX FOR BUTTONS AND CONTENT PREVIEW
+   ========================================================================== */
+
+@media screen and (max-width: 782px) {
+  /* Center content preview */
+  .wp-list-table tbody .column-content,
+  .messages-table tbody .column-content {
+    margin-bottom: 15px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Center action buttons container */
+  .wp-list-table tbody .column-actions,
+  .messages-table tbody .column-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #e9ecef;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Center the action buttons */
+  .action-buttons {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    max-width: none;
+    width: auto;
+    flex-wrap: nowrap;
+  }
+
+  /* Style the buttons */
+  .button-small {
+    min-width: 90px;
+    padding: 10px 16px;
+    justify-content: center;
+    font-size: 13px;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .edit-btn {
+    background-color: #0073aa;
+    color: white;
+  }
+
+  .edit-btn:hover {
+    background-color: #005a87;
+    transform: translateY(-1px);
+  }
+
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+
+  .delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+  }
+
+  .button-small .button-text {
+    display: inline !important;
+    font-weight: 500;
+  }
+
+  .button-small .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Improve button spacing on very small screens */
+  @media screen and (max-width: 480px) {
+    .action-buttons {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .button-small {
+      width: 100%;
+      max-width: 200px;
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  }
+
+  /* Center other elements for consistency */
+  .wp-list-table tbody .column-position,
+  .messages-table tbody .column-position {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .position-badge {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Center pages and roles display */
+  .wp-list-table tbody .column-pages,
+  .wp-list-table tbody .column-roles,
+  .messages-table tbody .column-pages,
+  .messages-table tbody .column-roles {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+
+  .pages-all,
+  .pages-specific,
+  .roles-all,
+  .roles-specific {
+    padding: 4px 8px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  /* Center dismissible status */
+  .wp-list-table tbody .column-dismissible,
+  .messages-table tbody .column-dismissible {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .dismissible-yes,
+  .dismissible-no {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0 auto;
+  }
+
+  /* Center schedule info */
+  .wp-list-table tbody .column-schedule,
+  .messages-table tbody .column-schedule {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .schedule-info {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    max-width: 200px;
+  }
+
+  .schedule-always {
+    color: #28a745;
+    font-weight: 600;
+  }
+
+  .schedule-start,
+  .schedule-end {
+    display: block;
+    margin: 4px 0;
+    color: #666;
+  }
+
+  /* Center shortcode */
+  .wp-list-table tbody .column-shortcode,
+  .messages-table tbody .column-shortcode {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .shortcode-copy {
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: 11px;
+    padding: 8px 12px;
+    display: block;
+    text-align: center;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    font-family: "Courier New", monospace;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .shortcode-copy:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+  }
+
+  /* Improve mobile card overall appearance */
+  .wp-list-table tbody tr,
+  .messages-table tbody tr {
+    padding: 25px 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    background: #fff !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  /* Add subtle animation for better UX */
+  .wp-list-table tbody tr:hover,
+  .messages-table tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+}

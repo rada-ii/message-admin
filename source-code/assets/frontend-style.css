@@ -1,0 +1,467 @@
+/* 
+ * Message Admin - Frontend Styles 
+ * Styles for messages displayed on the website
+ */
+
+/* Base message styling */
+.message-admin-display {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  max-width: 1140px;
+}
+
+.message-admin-display::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0073aa, #005a87);
+}
+
+.message-admin-display:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Content within message */
+.message-admin-content {
+  position: relative;
+  z-index: 1;
+}
+
+.message-admin-content h1,
+.message-admin-content h2,
+.message-admin-content h3,
+.message-admin-content h4,
+.message-admin-content h5,
+.message-admin-content h6 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.message-admin-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.message-admin-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Position-specific styling */
+.message-admin-position-before_content {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  margin: 20px auto 30px auto;
+}
+
+.message-admin-position-before_content::before {
+  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.8));
+}
+
+.message-admin-position-before_content .message-admin-content {
+  color: #fff;
+}
+
+.message-admin-position-before_content .message-admin-content h1,
+.message-admin-position-before_content .message-admin-content h2,
+.message-admin-position-before_content .message-admin-content h3,
+.message-admin-position-before_content .message-admin-content h4,
+.message-admin-position-before_content .message-admin-content h5,
+.message-admin-position-before_content .message-admin-content h6 {
+  color: #fff;
+}
+
+.message-admin-position-before_content .message-admin-content p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.message-admin-position-after_content {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+  margin: 30px auto 20px auto;
+}
+
+.message-admin-position-after_content::before {
+  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.8));
+}
+
+.message-admin-position-after_content .message-admin-content {
+  color: #fff;
+}
+
+.message-admin-position-after_content .message-admin-content h1,
+.message-admin-position-after_content .message-admin-content h2,
+.message-admin-position-after_content .message-admin-content h3,
+.message-admin-position-after_content .message-admin-content h4,
+.message-admin-position-after_content .message-admin-content h5,
+.message-admin-position-after_content .message-admin-content h6 {
+  color: #fff;
+}
+
+.message-admin-position-after_content .message-admin-content p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Shortcode messages */
+.message-admin-shortcode {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: #fff;
+  border-radius: 12px;
+}
+
+.message-admin-shortcode::before {
+  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.8));
+}
+
+.message-admin-shortcode .message-admin-content {
+  color: #fff;
+}
+
+.message-admin-shortcode .message-admin-content h1,
+.message-admin-shortcode .message-admin-content h2,
+.message-admin-shortcode .message-admin-content h3,
+.message-admin-shortcode .message-admin-content h4,
+.message-admin-shortcode .message-admin-content h5,
+.message-admin-shortcode .message-admin-content h6 {
+  color: #fff;
+}
+
+.message-admin-shortcode .message-admin-content p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Header i footer container styling */
+.message-admin-header-container,
+.message-admin-footer-container {
+  width: 100%;
+  padding: 15px 0;
+}
+
+.message-admin-header-container {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.message-admin-footer-container {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  margin-top: 30px;
+}
+
+.message-admin-header-container .message-admin-display,
+.message-admin-footer-container .message-admin-display {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Responsive design */
+@media (max-width: 1250px) {
+  .message-admin-display {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .message-admin-display {
+    margin: 15px 10px;
+    padding: 15px;
+    border-radius: 6px;
+  }
+
+  .message-admin-content {
+    font-size: 14px;
+  }
+
+  .message-admin-position-before_content,
+  .message-admin-position-after_content {
+    margin: 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .message-admin-display {
+    margin: 10px 5px;
+    padding: 12px;
+    border-radius: 4px;
+  }
+
+  .message-admin-content {
+    font-size: 13px;
+  }
+
+  .message-admin-content h1,
+  .message-admin-content h2,
+  .message-admin-content h3,
+  .message-admin-content h4,
+  .message-admin-content h5,
+  .message-admin-content h6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Animation for new messages */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-admin-display {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Special styling for different message types */
+.message-admin-display.message-type-info {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+}
+
+.message-admin-display.message-type-success {
+  background: linear-gradient(135deg, #55a3ff 0%, #003d82 100%);
+}
+
+.message-admin-display.message-type-warning {
+  background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+}
+
+.message-admin-display.message-type-error {
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+}
+
+/* Links within messages */
+.message-admin-content a {
+  color: inherit;
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.message-admin-content a:hover {
+  opacity: 0.8;
+}
+
+/* Lists within messages */
+.message-admin-content ul,
+.message-admin-content ol {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.message-admin-content li {
+  margin-bottom: 5px;
+}
+
+/* Images within messages */
+.message-admin-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+/* Base message styling */
+.message-admin-display {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  max-width: 1140px;
+}
+
+.message-admin-display::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0073aa, #005a87);
+}
+
+.message-admin-display:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Dismiss button styling */
+.message-admin-dismiss {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.message-admin-dismiss:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.message-admin-dismiss:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+.message-admin-dismiss:active {
+  transform: scale(0.95);
+}
+
+/* Loading state for dismissing messages */
+.message-admin-dismissing {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.message-admin-dismissing .message-admin-dismiss {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+}
+
+/* Fade in animation */
+.message-admin-fade-in {
+  animation: messageAdminFadeInUp 0.6s ease-out;
+}
+
+@keyframes messageAdminFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects for dismissible messages */
+.message-admin-hover-enabled:hover .message-admin-dismiss {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Widget-specific message styling */
+.message-admin-widget {
+  margin: 15px 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background: #fff;
+  border-left: 4px solid #0073aa;
+}
+
+.message-admin-widget::before {
+  display: none; /* Remove the gradient bar for widgets */
+}
+
+.message-admin-widget .message-admin-content {
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.message-admin-widget .message-admin-content h1,
+.message-admin-widget .message-admin-content h2,
+.message-admin-widget .message-admin-content h3,
+.message-admin-widget .message-admin-content h4,
+.message-admin-widget .message-admin-content h5,
+.message-admin-widget .message-admin-content h6 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.message-admin-widget .message-admin-content p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.message-admin-widget .message-admin-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Widget dismiss button */
+.message-admin-widget .message-admin-dismiss {
+  background: rgba(0, 0, 0, 0.1);
+  color: #666;
+  font-size: 18px;
+  width: 25px;
+  height: 25px;
+  top: 8px;
+  right: 8px;
+}
+
+.message-admin-widget .message-admin-dismiss:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+/* Different widget message types */
+.message-admin-widget.message-type-success {
+  border-left-color: #46b450;
+}
+
+.message-admin-widget.message-type-warning {
+  border-left-color: #ffb900;
+}
+
+.message-admin-widget.message-type-error {
+  border-left-color: #dc3232;
+}
+
+.message-admin-widget.message-type-info {
+  border-left-color: #0073aa;
+}
+
+/* Responsive widget styling */
+@media (max-width: 768px) {
+  .message-admin-widget {
+    margin: 10px 0;
+  }
+
+  .message-admin-widget .message-admin-content {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .message-admin-widget .message-admin-content h1,
+  .message-admin-widget .message-admin-content h2,
+  .message-admin-widget .message-admin-content h3,
+  .message-admin-widget .message-admin-content h4,
+  .message-admin-widget .message-admin-content h5,
+  .message-admin-widget .message-admin-content h6 {
+    font-size: 14px;
+  }
+}
