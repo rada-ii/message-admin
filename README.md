@@ -6,6 +6,8 @@
 ![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)
 ![Version](https://img.shields.io/badge/Version-2.1.0-green.svg)
 
+**Live Demo:** <a href="https://dev-message-admin.pantheonsite.io/home/" target="_blank">Try it Live</a>
+
 ## ✨ Key Features
 
 - 🎯 **Smart Targeting** - Display messages to specific pages and user roles
